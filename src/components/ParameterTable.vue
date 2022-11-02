@@ -11,8 +11,6 @@
 </tr>
 
 
-
-
 <table class="table table-striped">
 
 
@@ -30,36 +28,23 @@
      <td>{{ index + 1 }}</td>
      <td>{{ parameter.name }}</td>
      <td>{{ parameter.username }}</td>
-     <td><button type="button" class="btn btn-warning">Detail</button></td>
+     <td><ButtonDetail :visible="false" variant="success">email: {{ parameter.email }}</ButtonDetail></td>
    </tr>  
  </tbody>
-   </table>
-   <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-end">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Sebelumnya</a>
-      
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Selanjutnya</a>
-    </li>
-  </ul>
-</nav>
-
-
-  
+</table>
    </template>
    
    <script>
-      export default {
-     name: 'parameter-table',
-     props: {
+import ButtonDetail from './ButtonDetail.vue';
+
+export default {
+  name: 'parameter-table',
+  props: {
        parameters: Array,
      },
-     
+     components:{
+      ButtonDetail
+     }
    }
    </script>
    

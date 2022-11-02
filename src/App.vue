@@ -10,7 +10,6 @@
 <script>
 import ParameterTable from '@/components/ParameterTable.vue'
 
-
 export default {
   name: "App",
   data() {
